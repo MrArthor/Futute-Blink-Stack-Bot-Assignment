@@ -93,7 +93,7 @@ Both the requester and the approver(s) will receive real-time notifications abou
 
 ## 6. Contributors <a name="contributors"></a>
 
-- [Vansh Sachdeva](https://github.com/Mr Arthor)
+- [Vansh Sachdeva](https://github.com/MrArthor)
 
 ## 7. License <a name="license"></a>
 
