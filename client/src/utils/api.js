@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const baseURL = 'http://localhost:3000'; // Update with your backend server URL
+const baseURL = 'https://futute-blink-stack-bot-assignment.onrender.com/'; // Update with your backend server URL
 
 const api = axios.create({
   baseURL,
