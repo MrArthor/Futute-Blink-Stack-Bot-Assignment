@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import ApprovalModal from './components/ApprovalModal';
-import axios from 'axios';
+import { submitApproval } from './utils/api';
 import './App.css';
 
 const App = () => {
@@ -16,10 +16,9 @@ const App = () => {
     setModalOpen(false);
   };
 
-  const submitApproval = async (approver, approvalText) => {
+  const handleSubmitApproval = async (approver, approvalText) => {
     try {
-      // Make HTTP POST request to submit approval
-      await axios.post('/slack/submit', { approver, approvalText });
+      await submitApproval(approver, approvalText);
       closeModal();
       alert('Approval request submitted successfully!');
     } catch (error) {
@@ -32,7 +31,7 @@ const App = () => {
     <div className="app-container">
       <h1>Slack Approval Bot</h1>
       <button onClick={openModal}>Request Approval</button>
-      <ApprovalModal open={modalOpen} closeModal={closeModal} submitApproval={submitApproval} />
+      <ApprovalModal open={modalOpen} closeModal={closeModal} submitApproval={handleSubmitApproval} />
     </div>
   );
 };
